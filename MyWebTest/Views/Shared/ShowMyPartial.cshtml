@@ -1,0 +1,13 @@
+﻿<style>
+.year_select { background-color:Green; color:#fff; width:20%; margin:5px; }
+</style>
+
+<div class="year_select">
+<label>Year
+<select>
+@for(int i=2014; i<=2020; i++){
+<option id="@i">西元 @i</option>
+}
+</select>
+</label>
+</div>

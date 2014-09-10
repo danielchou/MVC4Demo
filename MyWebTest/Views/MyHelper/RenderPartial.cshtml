@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "RenderPartial";
+}
+
+<h2>RenderPartial</h2>
+
+<div class=dscr>
+共用你的UI模組，PatialView也可以接上強型別的Model。
+</div>
+
+@*去Views/Shared/內找ShowMyPartial.cshtml檔案*@
+@Html.Partial("ShowMyPartial")
+
+<hr>
+
+<div class=dscr>
+檢視你的原始碼，你會發現Style也會重複出現，記得考量CSS是否需要提出去共用!!。
+</div>
+
+@for (int i = 0; i < 5; i++) {
+@Html.Partial("ShowMyPartial")
+}

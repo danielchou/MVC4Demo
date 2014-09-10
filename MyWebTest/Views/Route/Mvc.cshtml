@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Mvc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Routing解析後結果</h2>
+<div class="result">
+    <b>Contry：@ViewBag.Contry</b><br />
+    <b>Lang：@ViewBag.Lang</b><br />
+    <b>PostID：@ViewData["PostID"]</b>
+</div>
+<div class="dscr">
+    現在抓取了參數PostID，我想透過ViewData帶到別的Action，可以嗎?
+</div>
+<a class="font18" href="/Route/CrossPostID">請點選我測試看看!</a>

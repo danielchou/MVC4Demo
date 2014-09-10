@@ -1,0 +1,16 @@
+﻿<style>
+b { font-size:22px;}
+</style>
+
+@{
+    //邏輯切記不要寫在View內，這是不好的示範!
+    int a = 100;
+    int b=20;
+    int c=a+b;  
+}
+
+
+<h2>@@ Razor 好用的ViewEngine</h2>
+<div class=dscr>請查看RazorController.cs與相對View內的語法。</div>
+<b>@a @b @c</b><br /><br />
+<b>從Controller內計算的數值：@MyWebTest.Controllers.RazorController.CalculateMe()</b>

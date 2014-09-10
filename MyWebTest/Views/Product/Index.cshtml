@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+.AR { width:100%; float:left; padding:9px; border-top:solid 1px #aaa;  }
+ .AR a { float:left; width:22%; margin:4px; padding:9px 0; text-align:center; border:solid 1px #aaa; color:#333; background-color:#fff; text-decoration:none;}
+ .AR a:hover { color:#fff; background-color:#333;}
+ .sm { font-size:13px; font-weight:bold; color:brown; padding:2px 20px;}
+</style>
+
+<h2>各種好用的ActionResult</h2>
+<div class="AR">
+    <label>FileResult</label>
+    <img src="/Product/GetAudi" alt="My Audi 101" width="300px" /></div>
+    <a href="/Product/GetAudi" >點選到圖片</a>
+<div class="AR">
+    <label>JSONResult<span class="sm">(HttpPost請開啟Chrome DevTool or Firebug檢視)</span></label>
+    <a href="/Product/TestGetJson" >HttpGet 預設會出錯</a>
+    <a href="/Product/TestGetJsonAllowGet" >HttpGet AllowGet,不建議</a>
+    <a href="#" id="a_OneProductTypJson" >HttpPost簡單物件</a>
+    <a href="#" id="a_ProductTypsJson" >HttpPost吐出多物件</a>
+    <a href="#" id="a_NewJsonDateFormat" class="wide" >JSON時間格式加工：<br />運用Newtonsoft.Json，透過自訂Filter方式將JsonResult複寫，專案內都通用!<br />請參照Filters內的JsonDateResult.cs。</a>
+</div>
+
+<div class="AR">
+    <label>RedirectResult</label>
+    <a href="/Product/RedirectHome" >Controller內轉址</a>
+</div>
+
+<div class="AR">
+    <label>HttpStatusCodeResult</label>
+    <a id="a_CreatedHttpStatus" >自己控制HttpStatus</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+
+        $(function () { });
+
+        $("#a_OneProductTypJson").click(function () {
+            $.post("/Product/TestOneTypJson", {}, function () { });
+        });
+
+        $("#a_ProductTypsJson").click(function () {
+            $.post("/Product/TestTypsJson", {}, function () { });
+        });
+
+        $("#a_CreatedHttpStatus").click(function () {
+            $.post("/Product/CreatedHttpStatus", {}, function () { });
+        });
+
+        $("#a_NewJsonDateFormat").click(function () {
+            $.post("/Product/NewJsonDateFormat", {}, function () { });
+        });
+    
+    </script>
+}

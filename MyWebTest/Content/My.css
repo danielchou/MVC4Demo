@@ -1,0 +1,7 @@
+﻿#main a { float:left; width:100%; font-size:18px; margin:4px; padding:12px; border:solid 2px #aaa; color:#333; background-color:#fff; text-decoration:none;}
+#main a:hover { color:#fff; background-color:#333;}
+.result { font-size:18px; width:100%; display:inline-block; background-color:#fff; border:solid 1px #aaa; padding:20px; margin:20px 0 0; color:Blue; }
+.dscr { font-size:18px; width:100%; display:inline-block; background-color:#fff; border-bottom:dashed 1px #aaa; padding:20px; margin:20px 0;}
+.dscr b { float:left; width:100%; font-size:22px; }
+.font18 { font-size:18px; }
+.AR a.wide { width:40%; text-align:left; padding:10px 20px;  }

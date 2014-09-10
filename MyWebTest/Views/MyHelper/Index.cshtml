@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";   
+}
+
+<h2>各種WebHelper</h2>
+
+<p>@Html.ActionLink("Hello! Read Me", "ReadMe")</p>
+<p>@Html.ActionLink("Go to home", "About", "Home")</p>
+
+@using (Html.BeginForm("Save", "MyHelper", FormMethod.Post)) {
+
+<p>@Html.Label("姓名")</p>
+<p>@Html.TextBox("name")</p>
+<p>@Html.TextArea("note")</p>
+<p>@Html.CheckBox("isEnable")</p>
+<p>@Html.RadioButton("Gender", "Boy", true) @Html.RadioButton("Gender", "Girl")</p>
+<p><button type=submit>Save</button></p>
+}
+
+

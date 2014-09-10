@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<style>
+#form imput { font-size:16px; padding:3px; margin:3px; width:200px; }
+</style>
+<h2>DefaultDataBinder </h2>
+<h4>透過HttpPost傳遞自動轉換物件到Controller</h4>
+
+
+<form id="form" method="post" action="/BindModel/Save">
+<p><label></label><input type=text name="u.Name" value="daniel" placeholder="請輸入名字" /></p>
+<p><label></label><input type=text name="u.Email" placeholder="請輸入Email" /></p>
+<p><label></label><input type=text name="u.Age" placeholder="請輸入年紀" /></p>
+<p><button type=submit>SAVE</button></p>
+</form> 
